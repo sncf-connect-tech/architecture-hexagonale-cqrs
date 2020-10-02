@@ -1,13 +1,12 @@
+[![Build Status](https://travis-ci.org/voyages-sncf-technologies/architecture-hexagonale-cqrs.svg)](https://travis-ci.org/voyages-sncf-technologies/architecture-hexagonale-cqrs)
+
 # Architecture hexagonale et CQRS
 
-Ce projet est une implémentation de 2 types d'architectures complémentaires :
+Ce projet est une implémentation de 2 types d'architectures complémentaires.
 
-* Hexagonale (DDD)
-* CQRS (Command Query Responsability Segregation)
+Elle n'a pas pour but d'expliquer ce qu'est le DDD mais d'en présenter une implémentation sous forme d'_architecture hexagonale et CQRS_ dans le contexte d'une API REST SpringBoot.
 
-Elle n'a pas pour but d'expliquer ce qu'est le DDD mais de présenter une façon de l'implémenter sous forme d'_architecture hexagonale_ dans le contexte d'une API REST SpringBoot.
-
-## DDD - Architecture hexagonale
+## Architecture hexagonale
 
 L'architecture hexagonale mise en place est représentée par 4 couches :
 

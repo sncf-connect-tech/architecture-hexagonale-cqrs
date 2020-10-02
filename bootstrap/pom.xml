@@ -3,13 +3,30 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <parent>
-        <artifactId>ddd-cqrs</artifactId>
-        <groupId>com.vsct.ddd-cqrs</groupId>
+        <artifactId>hexagonalcqrs</artifactId>
+        <groupId>com.vsct.hexagonalcqrs</groupId>
         <version>0.0.1-SNAPSHOT</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
     <artifactId>bootstrap</artifactId>
 
+    <dependencies>
+        <!-- Dépendances DDD -->
+        <dependency>
+            <groupId>com.vsct.hexagonalcqrs</groupId>
+            <artifactId>presentation</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.vsct.hexagonalcqrs</groupId>
+            <artifactId>infrastructure</artifactId>
+        </dependency>
+
+        <!-- Spring Boot -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+    </dependencies>
 
 </project>

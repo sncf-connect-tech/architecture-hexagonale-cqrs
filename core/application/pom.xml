@@ -4,7 +4,7 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <parent>
         <artifactId>core</artifactId>
-        <groupId>com.vsct.ddd-cqrs</groupId>
+        <groupId>com.vsct.hexagonalcqrs</groupId>
         <version>0.0.1-SNAPSHOT</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
@@ -12,9 +12,16 @@
     <artifactId>application</artifactId>
 
     <dependencies>
+        <!-- Dépendances DDD -->
         <dependency>
             <groupId>${project.groupId}</groupId>
             <artifactId>domain</artifactId>
+        </dependency>
+
+        <!-- Spring Boot -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
     </dependencies>
 

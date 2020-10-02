@@ -3,8 +3,8 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <parent>
-        <groupId>com.vsct.ddd-cqrs</groupId>
-        <artifactId>ddd-cqrs</artifactId>
+        <groupId>com.vsct.hexagonalcqrs</groupId>
+        <artifactId>hexagonalcqrs</artifactId>
         <version>0.0.1-SNAPSHOT</version>
     </parent>
 
@@ -18,4 +18,5 @@
         <module>domain</module>
         <module>infrastructure</module>
     </modules>
+
 </project>

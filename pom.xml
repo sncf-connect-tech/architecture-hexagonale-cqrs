@@ -3,17 +3,17 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.vsct.ddd-cqrs</groupId>
-    <artifactId>ddd-cqrs</artifactId>
+    <groupId>com.vsct.hexagonalcqrs</groupId>
+    <artifactId>hexagonalcqrs</artifactId>
     <version>0.0.1-SNAPSHOT</version>
 
-    <name>ddd-cqrs</name>
-    <description>API REST avec architecture hexagonale (DDD) et CQRS</description>
+    <name>hexagonalcqrs</name>
+    <description>API REST avec architecture hexagonale et CQRS</description>
 
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>2.1.6.RELEASE</version>
+        <version>2.1.9.RELEASE</version>
         <relativePath/>
     </parent>
 
@@ -22,34 +22,76 @@
     <modules>
         <module>core</module>
         <module>bootstrap</module>
-        <module>commons</module>
         <module>tests</module>
     </modules>
 
     <properties>
+        <!-- Project -->
         <java.version>1.8</java.version>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <!-- Dependencies -->
+        <axon.version>3.4.3</axon.version>
+        <cucumber.version>4.8.0</cucumber.version>
     </properties>
 
-    <dependencies>
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-web</artifactId>
-        </dependency>
+    <dependencyManagement>
+        <dependencies>
+            <!-- Bootstrap -->
+            <dependency>
+                <groupId>com.vsct.hexagonalcqrs</groupId>
+                <artifactId>bootstrap</artifactId>
+                <version>${project.version}</version>
+            </dependency>
 
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-test</artifactId>
-            <scope>test</scope>
-        </dependency>
-    </dependencies>
+            <!-- Dépendances DDD -->
+            <dependency>
+                <groupId>com.vsct.hexagonalcqrs</groupId>
+                <artifactId>presentation</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.vsct.hexagonalcqrs</groupId>
+                <artifactId>application</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.vsct.hexagonalcqrs</groupId>
+                <artifactId>domain</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.vsct.hexagonalcqrs</groupId>
+                <artifactId>infrastructure</artifactId>
+                <version>${project.version}</version>
+            </dependency>
 
-    <build>
-        <plugins>
-            <plugin>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-maven-plugin</artifactId>
-            </plugin>
-        </plugins>
-    </build>
+            <!-- Axon -->
+            <dependency>
+                <groupId>org.axonframework</groupId>
+                <artifactId>axon-spring-boot-starter</artifactId>
+                <version>${axon.version}</version>
+            </dependency>
 
+            <!-- Cucumber -->
+            <dependency>
+                <groupId>io.cucumber</groupId>
+                <artifactId>cucumber-junit</artifactId>
+                <version>${cucumber.version}</version>
+                <scope>test</scope>
+            </dependency>
+            <dependency>
+                <groupId>io.cucumber</groupId>
+                <artifactId>cucumber-java8</artifactId>
+                <version>${cucumber.version}</version>
+                <scope>test</scope>
+            </dependency>
+            <dependency>
+                <groupId>io.cucumber</groupId>
+                <artifactId>cucumber-spring</artifactId>
+                <version>${cucumber.version}</version>
+                <scope>test</scope>
+            </dependency>
+
+        </dependencies>
+    </dependencyManagement>
 </project>

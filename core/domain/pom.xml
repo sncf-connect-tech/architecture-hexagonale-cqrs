@@ -4,13 +4,19 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <parent>
         <artifactId>core</artifactId>
-        <groupId>com.vsct.ddd-cqrs</groupId>
+        <groupId>com.vsct.hexagonalcqrs</groupId>
         <version>0.0.1-SNAPSHOT</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
     <artifactId>domain</artifactId>
 
-    <dependencies></dependencies>
+    <dependencies>
+        <!-- Axon -->
+        <dependency>
+            <groupId>org.axonframework</groupId>
+            <artifactId>axon-spring-boot-starter</artifactId>
+        </dependency>
+    </dependencies>
 
 </project>
