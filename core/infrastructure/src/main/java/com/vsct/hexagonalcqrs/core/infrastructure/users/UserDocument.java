@@ -15,6 +15,9 @@ public class UserDocument {
     private String name;
     private LocalDateTime subscriptionDate;
 
+    public UserDocument() {
+    }
+
     public UserDocument(String id, User user, LocalDateTime subscriptionDate) {
         this.id = id;
         email = user.getEmail();
@@ -22,8 +25,36 @@ public class UserDocument {
         this.subscriptionDate = subscriptionDate;
     }
 
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public String getName() {
+        return name;
+    }
+
     public void setName(String name) {
         this.name = name;
+    }
+
+    public LocalDateTime getSubscriptionDate() {
+        return subscriptionDate;
+    }
+
+    public void setSubscriptionDate(LocalDateTime subscriptionDate) {
+        this.subscriptionDate = subscriptionDate;
     }
 
     public UserView toUserView() {

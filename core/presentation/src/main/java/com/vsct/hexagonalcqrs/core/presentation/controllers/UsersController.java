@@ -15,7 +15,7 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 @RestController
-@RequestMapping("/users")
+@RequestMapping(path = "/users")
 public class UsersController {
 
     private final UserUseCases userUseCases;
@@ -39,13 +39,13 @@ public class UsersController {
         return ResponseEntity.noContent().build();
     }
 
-    @DeleteMapping("/{email}")
+    @DeleteMapping("/{email:.*}")
     public ResponseEntity<String> deleteUser(@PathVariable("email") String email) {
         userUseCases.deleteUser(email);
         return ResponseEntity.ok("User " + email + " deleted");
     }
 
-    @GetMapping("/{email}")
+    @GetMapping(value = "/{email:.+}")
     public ResponseEntity<UserOutput> getUser(@PathVariable("email") String email) {
         UserView userView = userUseCases.findUser(email);
         UserOutput userOutput = new UserOutput(userView);

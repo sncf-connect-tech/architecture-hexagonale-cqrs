@@ -32,6 +32,7 @@
         <!-- Dependencies -->
         <axon.version>3.4.3</axon.version>
         <cucumber.version>4.8.0</cucumber.version>
+        <mongo-java-server.version>1.28.0</mongo-java-server.version>
     </properties>
 
     <dependencyManagement>
@@ -71,6 +72,11 @@
                 <artifactId>axon-spring-boot-starter</artifactId>
                 <version>${axon.version}</version>
             </dependency>
+            <dependency>
+                <groupId>org.axonframework</groupId>
+                <artifactId>axon-mongo</artifactId>
+                <version>${axon.version}</version>
+            </dependency>
 
             <!-- Cucumber -->
             <dependency>
@@ -90,6 +96,13 @@
                 <artifactId>cucumber-spring</artifactId>
                 <version>${cucumber.version}</version>
                 <scope>test</scope>
+            </dependency>
+
+            <!-- Fake Mongo -->
+            <dependency>
+                <groupId>de.bwaldvogel</groupId>
+                <artifactId>mongo-java-server</artifactId>
+                <version>${mongo-java-server.version}</version>
             </dependency>
 
         </dependencies>

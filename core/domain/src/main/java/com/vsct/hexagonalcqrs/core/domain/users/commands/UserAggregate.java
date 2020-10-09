@@ -10,14 +10,15 @@ import org.axonframework.commandhandling.model.AggregateLifecycle;
 import org.axonframework.eventsourcing.EventSourcingHandler;
 import org.axonframework.spring.stereotype.Aggregate;
 
-import java.io.Serializable;
-
 @Aggregate
-public class UserAggregate implements Serializable {
+public class UserAggregate {
 
     @AggregateIdentifier
     private String email;
     private String name;
+
+    public UserAggregate() {
+    }
 
     // Command handlers
 
