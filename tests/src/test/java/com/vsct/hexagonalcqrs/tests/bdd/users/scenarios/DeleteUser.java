@@ -20,7 +20,7 @@ public class DeleteUser implements En {
 
     public DeleteUser() {
         When("I delete this user", () -> {
-            ResponseEntity<String> responseEntity = userClient.deleteUser(userBuilder.getEmail());
+            ResponseEntity<String> responseEntity = userClient.updateUser(userBuilder.getEmail());
             testContext.setResponseEntity(responseEntity);
         });
 

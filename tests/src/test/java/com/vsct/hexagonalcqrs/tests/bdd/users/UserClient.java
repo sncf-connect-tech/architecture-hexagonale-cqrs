@@ -18,11 +18,11 @@ public class UserClient {
         return restTemplate.postForEntity("/users", userInput, String.class);
     }
 
-    public ResponseEntity<String> deleteUser(UserInput userInput) {
+    public ResponseEntity<String> updateUser(UserInput userInput) {
         return restTemplate.exchange("/users", HttpMethod.PUT, new HttpEntity<>(userInput), String.class);
     }
 
-    public ResponseEntity<String> deleteUser(String email) {
+    public ResponseEntity<String> updateUser(String email) {
         return restTemplate.exchange("/users/{email}", HttpMethod.DELETE, null, String.class, email);
     }
 

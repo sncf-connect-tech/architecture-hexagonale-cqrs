@@ -16,7 +16,9 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.core.env.Environment;
 import org.springframework.data.mongodb.core.MongoTemplate;
+import org.springframework.http.client.ClientHttpResponse;
 import org.springframework.test.context.ContextConfiguration;
+import org.springframework.web.client.DefaultResponseErrorHandler;
 import org.springframework.web.client.RestTemplate;
 
 @RunWith(Cucumber.class)
@@ -57,7 +59,15 @@ public class CucumberTest {
         public RestTemplate restTemplate(Environment environment) {
             RestTemplate restTemplate = new RestTemplate();
             restTemplate.setUriTemplateHandler(new LocalHostUriTemplateHandler(environment));
+            restTemplate.setErrorHandler(new NoOpResponseErrorHandler());
             return restTemplate;
+        }
+    }
+
+    private static class NoOpResponseErrorHandler extends DefaultResponseErrorHandler {
+        @Override
+        public void handleError(ClientHttpResponse response) {
+            // On laisse les erreurs passer parce qu'on veut les tester
         }
     }
 }
