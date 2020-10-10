@@ -10,11 +10,11 @@ stages:
 jobs:
   include:
     - stage: build
-      env: BUILD WITHOUT TEST
+      name: Build
       install: echo Not performing default install step
       script: mvn clean package -Dmaven.test.skip=true
     - stage: test
-      env: CUCUMBER TESTS
+      name: Test
       before_install:
         - chmod +x mvnw
       script: ./mvnw test

@@ -20,7 +20,6 @@ public class UserAggregate {
     public UserAggregate() {
         // TODO Subscription date
         // TODO Test cas marginaux
-        // TODO Commons module
         // TODO Travis
     }
 
