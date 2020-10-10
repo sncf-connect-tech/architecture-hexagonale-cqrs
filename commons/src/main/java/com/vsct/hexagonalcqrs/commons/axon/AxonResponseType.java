@@ -1,4 +1,4 @@
-package com.vsct.hexagonalcqrs.core.domain.axon;
+package com.vsct.hexagonalcqrs.commons.axon;
 
 import org.axonframework.queryhandling.responsetypes.AbstractResponseType;
 import org.axonframework.queryhandling.responsetypes.ResponseType;

@@ -1,6 +1,6 @@
 package com.vsct.hexagonalcqrs.core.domain.users.queries;
 
-import com.vsct.hexagonalcqrs.core.domain.axon.AxonQuery;
+import com.vsct.hexagonalcqrs.commons.axon.AxonQuery;
 import com.vsct.hexagonalcqrs.core.domain.users.queries.views.UserView;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;

@@ -20,8 +20,9 @@
     <packaging>pom</packaging>
 
     <modules>
-        <module>core</module>
         <module>bootstrap</module>
+        <module>commons</module>
+        <module>core</module>
         <module>tests</module>
     </modules>
 
@@ -41,6 +42,13 @@
             <dependency>
                 <groupId>com.vsct.hexagonalcqrs</groupId>
                 <artifactId>bootstrap</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+
+            <!-- Commons -->
+            <dependency>
+                <groupId>com.vsct.hexagonalcqrs</groupId>
+                <artifactId>commons</artifactId>
                 <version>${project.version}</version>
             </dependency>
 
