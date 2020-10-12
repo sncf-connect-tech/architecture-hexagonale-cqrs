@@ -11,9 +11,9 @@ import java.util.Map;
 @Component
 public class TestContext {
 
-    private ResponseEntity responseEntity;
+    private ResponseEntity<?> responseEntity;
 
-    public void setResponseEntity(ResponseEntity responseEntity) {
+    public void setResponseEntity(ResponseEntity<?> responseEntity) {
         this.responseEntity = responseEntity;
     }
 

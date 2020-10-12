@@ -16,17 +16,17 @@ import static org.springframework.http.HttpStatus.*;
 public class GlobalExceptionHandler extends ResponseEntityExceptionHandler {
 
     @ExceptionHandler(UserAlreadyExistsException.class)
-    public ResponseEntity handleConflict(Exception exception) {
+    public ResponseEntity<?> handleConflict(Exception exception) {
         return ResponseEntity.status(CONFLICT).body(exception.getMessage());
     }
 
     @ExceptionHandler(IllegalArgumentException.class)
-    public ResponseEntity handleBadRequest(Exception exception) {
+    public ResponseEntity<?> handleBadRequest(Exception exception) {
         return ResponseEntity.status(BAD_REQUEST).body(exception.getMessage());
     }
 
     @ExceptionHandler(UserNotFoundException.class)
-    public ResponseEntity handleNotFound(Exception exception) {
+    public ResponseEntity<?> handleNotFound(Exception exception) {
         return ResponseEntity.status(NOT_FOUND).body(exception.getMessage());
     }
 }

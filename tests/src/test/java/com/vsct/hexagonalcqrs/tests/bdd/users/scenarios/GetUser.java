@@ -27,6 +27,9 @@ public class GetUser implements En {
 
         Then("the user is successfully retrieved", () -> {
             assertEquals(HttpStatus.OK, testContext.getResponseStatusCode());
+            UserOutput expectedUserOutput = userBuilder.buildUserOutput();
+            UserOutput actualUserOutput = testContext.getResponseBody();
+            assertEquals(expectedUserOutput, actualUserOutput);
         });
     }
 }

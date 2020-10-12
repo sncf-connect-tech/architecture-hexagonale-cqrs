@@ -9,8 +9,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 
 import static org.junit.Assert.assertEquals;
-import static org.springframework.http.HttpStatus.BAD_REQUEST;
-import static org.springframework.http.HttpStatus.NO_CONTENT;
+import static org.springframework.http.HttpStatus.*;
 
 public class UpdateUser implements En {
     @Autowired
@@ -27,8 +26,14 @@ public class UpdateUser implements En {
             testContext.setResponseEntity(responseEntity);
         });
 
-        When("I try to update this with the same name", () -> {
+        When("I try to update this user with the same name", () -> {
             UserInput userInput = userBuilder.buildUserInput();
+            ResponseEntity<String> responseEntity = userClient.updateUser(userInput);
+            testContext.setResponseEntity(responseEntity);
+        });
+
+        When("I try to update a user that doesn't exist", () -> {
+            UserInput userInput = userBuilder.withEmail("nope@email.com").buildUserInput();
             ResponseEntity<String> responseEntity = userClient.updateUser(userInput);
             testContext.setResponseEntity(responseEntity);
         });
@@ -37,8 +42,12 @@ public class UpdateUser implements En {
             assertEquals(NO_CONTENT, testContext.getResponseStatusCode());
         });
 
-        Then("the update is rejected with a bad request error", () -> {
+        Then("the user update is rejected with a bad request error", () -> {
             assertEquals(BAD_REQUEST, testContext.getResponseStatusCode());
+        });
+
+        Then("the user update is rejected with a not found error", () -> {
+            assertEquals(NOT_FOUND, testContext.getResponseStatusCode());
         });
     }
 }

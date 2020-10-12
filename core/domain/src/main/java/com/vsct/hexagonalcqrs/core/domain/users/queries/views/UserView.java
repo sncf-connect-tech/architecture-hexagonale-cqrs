@@ -1,14 +1,14 @@
 package com.vsct.hexagonalcqrs.core.domain.users.queries.views;
 
-import java.time.LocalDateTime;
+import java.time.LocalDate;
 
 public class UserView {
 
     private final String email;
     private final String name;
-    private final LocalDateTime subscriptionDate;
+    private final LocalDate subscriptionDate;
 
-    public UserView(String email, String name, LocalDateTime subscriptionDate) {
+    public UserView(String email, String name, LocalDate subscriptionDate) {
         this.email = email;
         this.name = name;
         this.subscriptionDate = subscriptionDate;
@@ -22,7 +22,7 @@ public class UserView {
         return name;
     }
 
-    public LocalDateTime getSubscriptionDate() {
+    public LocalDate getSubscriptionDate() {
         return subscriptionDate;
     }
 }

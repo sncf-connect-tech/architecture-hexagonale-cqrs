@@ -32,6 +32,7 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <!-- Dependencies -->
         <axon.version>3.4.3</axon.version>
+        <commons-lang3.version>3.7</commons-lang3.version>
         <cucumber.version>4.8.0</cucumber.version>
         <mongo-java-server.version>1.28.0</mongo-java-server.version>
     </properties>
@@ -111,6 +112,12 @@
                 <groupId>de.bwaldvogel</groupId>
                 <artifactId>mongo-java-server</artifactId>
                 <version>${mongo-java-server.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.apache.commons</groupId>
+                <artifactId>commons-lang3</artifactId>
+                <version>${commons-lang3.version}</version>
             </dependency>
 
         </dependencies>

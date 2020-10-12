@@ -20,12 +20,25 @@ public class DeleteUser implements En {
 
     public DeleteUser() {
         When("I delete this user", () -> {
-            ResponseEntity<String> responseEntity = userClient.updateUser(userBuilder.getEmail());
-            testContext.setResponseEntity(responseEntity);
+            deleteUser();
+        });
+
+        When("I try to delete a user that doesn't exist", () -> {
+            userBuilder.withEmail("nope@email.com");
+            deleteUser();
         });
 
         Then("the user is successfully deleted", () -> {
             assertEquals(HttpStatus.OK, testContext.getResponseStatusCode());
         });
+
+        Then("the user deletion is rejected with a not found error", () -> {
+            assertEquals(HttpStatus.NOT_FOUND, testContext.getResponseStatusCode());
+        });
+    }
+
+    private void deleteUser() {
+        ResponseEntity<String> responseEntity = userClient.updateUser(userBuilder.getEmail());
+        testContext.setResponseEntity(responseEntity);
     }
 }

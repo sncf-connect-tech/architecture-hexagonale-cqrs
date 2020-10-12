@@ -5,7 +5,7 @@ import com.vsct.hexagonalcqrs.core.domain.users.queries.views.UserView;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
-import java.time.LocalDateTime;
+import java.time.LocalDate;
 
 @Document("user")
 public class UserDocument {
@@ -13,12 +13,12 @@ public class UserDocument {
     private String id;
     private String email;
     private String name;
-    private LocalDateTime subscriptionDate;
+    private LocalDate subscriptionDate;
 
     public UserDocument() {
     }
 
-    public UserDocument(String id, User user, LocalDateTime subscriptionDate) {
+    public UserDocument(String id, User user, LocalDate subscriptionDate) {
         this.id = id;
         email = user.getEmail();
         name = user.getName();
@@ -49,11 +49,11 @@ public class UserDocument {
         this.name = name;
     }
 
-    public LocalDateTime getSubscriptionDate() {
+    public LocalDate getSubscriptionDate() {
         return subscriptionDate;
     }
 
-    public void setSubscriptionDate(LocalDateTime subscriptionDate) {
+    public void setSubscriptionDate(LocalDate subscriptionDate) {
         this.subscriptionDate = subscriptionDate;
     }
 

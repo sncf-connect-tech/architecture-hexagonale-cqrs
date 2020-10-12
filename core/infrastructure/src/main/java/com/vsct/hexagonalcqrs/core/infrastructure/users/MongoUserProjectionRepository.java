@@ -13,7 +13,7 @@ import org.axonframework.queryhandling.QueryHandler;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
-import java.time.LocalDateTime;
+import java.time.LocalDate;
 import java.util.List;
 import java.util.Optional;
 import java.util.UUID;
@@ -35,7 +35,7 @@ public class MongoUserProjectionRepository implements UserProjectionRepository {
     @EventHandler
     public void onUserCreatedEvent(UserCreatedEvent event) {
         String newId = UUID.randomUUID().toString();
-        UserDocument userDocument = new UserDocument(newId, event.getUser(), LocalDateTime.now());
+        UserDocument userDocument = new UserDocument(newId, event.getUser(), LocalDate.now());
         mongoUserRepository.save(userDocument);
     }
 

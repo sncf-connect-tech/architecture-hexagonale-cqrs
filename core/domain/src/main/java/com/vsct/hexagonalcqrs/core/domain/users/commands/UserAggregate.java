@@ -18,9 +18,6 @@ public class UserAggregate {
     private String name;
 
     public UserAggregate() {
-        // TODO Subscription date
-        // TODO Test cas marginaux
-        // TODO Travis
     }
 
     // Command handlers
