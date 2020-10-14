@@ -6,6 +6,8 @@ Ce projet est une implémentation de 2 types d'architectures complémentaires.
 
 Elle n'a pas pour but d'expliquer ce qu'est le DDD mais d'en présenter une implémentation sous forme d'_architecture hexagonale et CQRS_ dans le contexte d'une API REST SpringBoot.
 
+Il s'agit de l'architecture employé sur le projet [Hesperides](https://github.com/voyages-sncf-technologies/hesperides). Vous pouvez donc vous y référez pour avoir un exemple d'application plus complète et employée en production.
+
 ## Architecture hexagonale
 
 L'architecture hexagonale mise en place est représentée par 4 couches :
@@ -51,6 +53,19 @@ Une architecture CQRS sépare de manière explicite la logique applicative conte
 
 Un aspect important du CQRS est de simplifier la lecture en préparant les données, autrement appelées "vues", lors de la phase d'écriture. Cela implique de gérer un maximum des traitements lors de l'écriture et un minimum lors de la lecture.
 
-/!\ Cela peut avoir un impact sur la complexité du code, il faut éviter de vouloir à tout prix tout préparer lors de l'écriture et faire au cas par cas.
+⚠️ Cela peut avoir un impact sur la complexité du code, il faut éviter de vouloir à tout prix tout préparer lors de l'écriture et faire au cas par cas.
 
 _A compléter avec un schéma_
+
+
+## Tests BDD
+
+Afin d'implémenter des tests de non-régressions mettant en évidence les fonctionnalités de l'application,
+des tests BDDs ont été implémentés avec _Cucumber_.
+
+
+## Ressources
+
+- une introduction au DDD : [Domain-Driven Design Vite fait](https://www.infoq.com/fr/minibooks/domain-driven-design-quickly/)
+- une introduction au _pattern_ CQRS  (en anglais) : [CQRS Introduction](https://cqrs.wordpress.com/documents/cqrs-introduction/)
+- deux introductions aux tests BDD : [sur OpenClassrooms](https://openclassrooms.com/fr/courses/3504461-testez-linterface-de-votre-site/4270566-apprenez-le-behavior-driven-development-bdd) - [Le BDD, qu’est ce que c’est?](https://www.arolla.fr/blog/2012/06/bdd-c-est-quoi-donc/)

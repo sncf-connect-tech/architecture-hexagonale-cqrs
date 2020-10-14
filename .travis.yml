@@ -15,6 +15,4 @@ jobs:
       script: mvn clean package -Dmaven.test.skip=true
     - stage: test
       name: Test
-      before_install:
-        - chmod +x mvnw
-      script: ./mvnw test
+      script: mvn test
