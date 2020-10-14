@@ -67,7 +67,8 @@ public class CucumberTest {
     private static class NoOpResponseErrorHandler extends DefaultResponseErrorHandler {
         @Override
         public void handleError(ClientHttpResponse response) {
-            // On laisse les erreurs passer parce qu'on veut les tester
+            // Définir un handler vide permet de gérer les cas d'utilisation en échec.
+            // Par exemple, lorsque dans un cas de test la réponse attendue est une erreur 400.
         }
     }
 }
