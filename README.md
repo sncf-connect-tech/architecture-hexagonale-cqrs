@@ -12,14 +12,14 @@ Il s'agit de l'architecture employée sur le projet [Hespérides](https://github
 
 ## Cas d'utilisations
 
-Les cas d'utilisations implémentés dans ce projet sont un simple CRUD Utilisateur.
+Les cas d'utilisations implémentés dans ce projet sont un simple [CRUD](https://fr.wikipedia.org/wiki/CRUD) Utilisateur.
 
 ## Contexte technique
 
-* Le projet est implémenté sous forme d'API REST **SpringBoot**
-* Nous utilisons le framework **Axon** pour gérer la partie *Event Sourcing*
-* **Cucumber** est utilisé pour les tests de non-régression fonctionnels &rarr; [Features](tests/src/test/resources/users)
-* **Travis** a été activé sur ce projet pour l'intégration continue &rarr; [Travis.yml](.travis.yml)
+* Le projet est implémenté sous forme d'API REST **[Spring Boot](https://spring.io/projects/spring-boot)**
+* Nous utilisons le framework **[Axon](https://axoniq.io/)** (version 3) pour gérer la partie *Event Sourcing*
+* **[Cucumber](https://cucumber.io/)** est utilisé pour les tests de non-régression fonctionnels &rarr; [Features](tests/src/test/resources/users)
+* **[Travis](https://travis-ci.org/)** a été activé sur ce projet pour l'intégration continue &rarr; [Travis.yml](.travis.yml)
 
 ## Architecture hexagonale
 
