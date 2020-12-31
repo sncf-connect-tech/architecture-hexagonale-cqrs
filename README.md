@@ -1,6 +1,4 @@
-[![Build Status](https://travis-ci.com/voyages-sncf-technologies/architecture-hexagonale-cqrs.svg)](https://travis-ci.com/voyages-sncf-technologies/architecture-hexagonale-cqrs)
-
-![Build Status](https://github.com/voyages-sncf-technologies/architecture-hexagonale-cqrs/workflows/Run%20Maven%20tests/badge.svg)
+[![Build Status](https://github.com/voyages-sncf-technologies/architecture-hexagonale-cqrs/workflows/CI/badge.svg)](https://github.com/voyages-sncf-technologies/architecture-hexagonale-cqrs/actions)
 
 # Architecture hexagonale et CQRS
 
