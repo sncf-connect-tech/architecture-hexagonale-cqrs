@@ -1,14 +1,18 @@
-[![Build Status](https://travis-ci.com/voyages-sncf-technologies/architecture-hexagonale-cqrs.svg)](https://travis-ci.com/voyages-sncf-technologies/architecture-hexagonale-cqrs)
+[![Test](https://github.com/voyages-sncf-technologies/architecture-hexagonale-cqrs/workflows/Test/badge.svg)](https://github.com/voyages-sncf-technologies/architecture-hexagonale-cqrs/actions?query=branch%3Amaster)
 
 # Architecture hexagonale et CQRS
 
-Le but de ce projet est de proposer une façon d'associer deux types architectures applicatives complémentaires issues du **DDD** : l'architecture *hexagonale* et l'architecture *CQRS*.
+Le but de ce projet est de proposer une façon d'associer deux types architectures applicatives complémentaires issues
+du **DDD** : l'architecture *hexagonale* et l'architecture *CQRS*.
 
-Il ne s'agit pas d'expliquer ce qu'est le DDD mais de démontrer comment ces deux architectures peuvent s'articuler. 
+Il ne s'agit pas d'expliquer ce qu'est le DDD mais de démontrer comment ces deux architectures peuvent s'articuler.
 
-Il s'agit de l'architecture employée sur le projet [Hespérides](https://github.com/voyages-sncf-technologies/hesperides). Vous pouvez donc vous y référez pour avoir un exemple d'application plus complète et employée en production.
+Il s'agit de l'architecture employée sur le projet [Hespérides](https://github.com/voyages-sncf-technologies/hesperides)
+. Vous pouvez donc vous y référez pour avoir un exemple d'application plus complète et employée en production.
 
-*Le CQRS a en partie été créé pour répondre à des problématiques liées à l'Event Sourcing. Il n'est pas indispensable de faire de l'Event Sourcing avec du CQRS mais les deux vont souvent de pair. Ici nous avons fait le choix d'utiliser les deux.*
+*Le CQRS a en partie été créé pour répondre à des problématiques liées à l'Event Sourcing. Il n'est pas indispensable de
+faire de l'Event Sourcing avec du CQRS mais les deux vont souvent de pair. Ici nous avons fait le choix d'utiliser les
+deux.*
 
 ## Cas d'utilisations
 
