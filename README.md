@@ -1,4 +1,4 @@
-[![Build Status](https://github.com/voyages-sncf-technologies/architecture-hexagonale-cqrs/workflows/CI/badge.svg)](https://github.com/voyages-sncf-technologies/architecture-hexagonale-cqrs/actions)
+[![Build Status](https://github.com/voyages-sncf-technologies/architecture-hexagonale-cqrs/workflows/CI/badge.svg?branch=master)](https://github.com/voyages-sncf-technologies/architecture-hexagonale-cqrs/actions)
 
 # Architecture hexagonale et CQRS
 
